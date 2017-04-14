@@ -3,7 +3,7 @@ public class Aufwandsanalyse {
 	public static void main(String[] args) {
 
 		Pascal pascal;
-		for (int zeile = 1; zeile < 99; zeile += 1) {
+		for (int zeile = 1; zeile < 33; zeile += 1) {
 			System.out.println("\n ######## ZEILE : " + zeile + " #######");
 
 			pascal = new BinominalerPascal();
