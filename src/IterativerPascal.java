@@ -1,7 +1,7 @@
 
 public class IterativerPascal implements Pascal {
 
-	private long _zaehler;
+	private long zaehler;
 
 	public long[] berechnePascalschesDreieck(int zeile) {
 		long[][] pascal = new long[zeile][zeile + 2];
@@ -10,9 +10,9 @@ public class IterativerPascal implements Pascal {
 		pascal[0][1] = 1;
 
 		for (int reihe = 1; reihe < zeile; reihe++) {
-			_zaehler++;
+			zaehler++;
 			for (int spalte = 1; spalte < zeile + 2; spalte++) {
-				_zaehler++;
+				zaehler++;
 				result = pascal[reihe - 1][spalte] + pascal[reihe - 1][spalte - 1];
 				pascal[reihe][spalte] = result;
 				if (result == 0) {
@@ -25,11 +25,11 @@ public class IterativerPascal implements Pascal {
 	}
 
 	public long getZaehler() {
-		return _zaehler;
+		return zaehler;
 	}
 
 	public void setZaehler(long zaehler) {
-		_zaehler = zaehler;
+		this.zaehler = zaehler;
 	}
 
 }

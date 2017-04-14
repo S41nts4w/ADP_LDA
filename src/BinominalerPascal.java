@@ -17,7 +17,12 @@ public class BinominalerPascal implements Pascal {
 
 			for (int k = 0; k <= n / 2; k++) {
 				zaehler++;
-				dreieckzeile[k] = nfakultaet / (getFakultaetvon(k) * getFakultaetvon(n - k));
+				try {
+					dreieckzeile[k] = nfakultaet / (getFakultaetvon(k) * getFakultaetvon(n - k));
+				} catch (ArithmeticException e) {
+					// Division durch Null
+					e.printStackTrace();
+				}
 
 				dreieckzeile[n - k] = dreieckzeile[k];
 			}
@@ -64,7 +69,7 @@ public class BinominalerPascal implements Pascal {
 	}
 
 	public void setZaehler(long zaehler) {
-		zaehler = zaehler;
+		this.zaehler = zaehler;
 	}
 
 }

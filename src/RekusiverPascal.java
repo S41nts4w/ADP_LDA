@@ -27,7 +27,7 @@ public class RekusiverPascal implements Pascal {
 	}
 
 	public void setZaehler(long zaehler) {
-		zaehler = zaehler;
+		this.zaehler = zaehler;
 	}
 
 }
