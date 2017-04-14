@@ -3,7 +3,7 @@ public class Aufwandsanalyse {
 	public static void main(String[] args) {
 
 		Pascal pascal;
-		for (int zeile = 1; zeile < 33; zeile += 1) {
+		for (int zeile = 1; zeile < 22; zeile += 1) {
 			System.out.println("\n ######## ZEILE : " + zeile + " #######");
 
 			pascal = new BinominalerPascal();
@@ -27,7 +27,7 @@ public class Aufwandsanalyse {
 
 		long[] result = pascal.berechnePascalschesDreieck(zeile);
 
-		// printArray(result);
+		printArray(result);
 
 		System.out.println(" : " + pascal.getZaehler());
 		pascal.setZaehler(0);
