@@ -113,15 +113,26 @@ public class Befueller
 		return result;
 	}
 	
-	private static boolean spezialBefuellt(int k, int[] elemente){
-		int j = elemente.length - 1;
-		for (int i = 1; i <= elemente.length; i++)
+	private static void spezialBefuellt(int k, int[] elemente){
+		int beginning = 700*(int) Math.pow(10, k);
+		for (int i = 0; i < elemente.length; i++)
 		{
-			elemente[j] = i + 1;
-			j--;
-		}
-		return false;
-		
+			elemente[i] = (int) (beginning+(Math.random()*100)*i);
+		}		
+	}
+	
+	public static void fuelleZufaellig(int k, int[] elemente)
+	{
+		spezialBefuellt(k, elemente);
+	    int index, temp;
+	    Random random = new Random();
+	    for (int i = elemente.length - 1; i > 0; i--)
+	    {
+	        index = random.nextInt(i + 1);
+	        temp = elemente[index];
+	        elemente[index] = elemente[i];
+	        elemente[i] = temp;
+	    }
 	}
 
 }
