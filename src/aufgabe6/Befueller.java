@@ -117,11 +117,11 @@ public class Befueller
 		int beginning = 700*(int) Math.pow(10, k);
 		for (int i = 0; i < elemente.length; i++)
 		{
-			elemente[i] = (int) (beginning+(Math.random()*100)*i);
+			elemente[i] = (int) (beginning+(100*i)+(Math.random()*100));
 		}		
 	}
 	
-	public static void fuelleZufaellig(int k, int[] elemente)
+	public static void spezialZufaellig(int k, int[] elemente)
 	{
 		spezialBefuellt(k, elemente);
 	    int index, temp;
