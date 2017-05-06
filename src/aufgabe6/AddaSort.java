@@ -98,6 +98,19 @@ public class AddaSort {
 		}
 		zeit2 = System.nanoTime();
 	}
+	
+	public void sort(int n,int arr[]){
+		zeit1 = System.nanoTime();
+        int[] output = new int[n];
+        int mod = 7*n;
+        for(int i = 0; i < arr.length;i++){
+            int index =(arr[i]/100)%mod;
+            output[index] = arr[i];
+            aufwandszaehler2++;
+        }
+        arr=output;
+        zeit2 = System.nanoTime();
+    }
 
 	public long getZeitAufwand() {
 		return zeit2 - zeit1;

@@ -10,7 +10,7 @@ public class StartUp {
 		int[] temp;
 		Quicksort quickMedian = new Quicksort(1);
 		
-		int k =1;
+		int k =6;
 		elemente = new int[(int) Math.pow(10, k)];
 		temp = new int[elemente.length];
 		Befueller.spezialZufaellig(k, elemente);
@@ -18,7 +18,7 @@ public class StartUp {
 		
 		AddaSort test = new AddaSort();
 
-		test.radixsort(temp);
+		test.sort(temp.length, temp);
 		
 		quickMedian.sortiere(elemente);
 		
