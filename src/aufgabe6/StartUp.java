@@ -12,33 +12,24 @@ public class StartUp {
 		
 		int k =1;
 		elemente = new int[(int) Math.pow(10, k)];
-		temp = new int[(int) Math.pow(10, k)];
+		temp = new int[elemente.length];
 		Befueller.spezialZufaellig(k, elemente);
 		Befueller.spezialZufaellig(k, temp);
 		
 		AddaSort test = new AddaSort();
-//		temp = test.sortiere(elemente);
-		
-//		for(int i= 0;i<temp.length;i++){
-//			System.out.println(temp[i]);
-//		}
-		
-		test.radixsort(temp, (int)Math.pow(10, k));
-		for(int i= 0;i<temp.length;i++){
-			System.out.println(temp[i]);
-			
-		}
+
+		test.radixsort(temp);
 		
 		quickMedian.sortiere(elemente);
 		
 		
 		
 				
-		System.out.println(quickMedian.getSchleifenZaehler());
-		System.out.println(quickMedian.getZeitAufwand());
+		System.out.println("Quicksort Aufwand: "+quickMedian.getSchleifenZaehler());
+		System.out.println("Quicksort Zeitaufwand: "+quickMedian.getZeitAufwand());
 //		System.out.println(test.getAufwand());
-		System.out.println(test.getZeitAufwand());
-		System.out.println(test.getAufwand2());
+		System.out.println("AddaSort Zeitaufwand: "+test.getZeitAufwand());
+		System.out.println("AddaSort Aufwand: "+test.getAufwand2());
 	}
 
 	private static int[] copyArray(int[] original) {

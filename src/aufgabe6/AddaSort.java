@@ -51,7 +51,7 @@ public class AddaSort {
 		int output[] = new int[n]; // output array
 		int i;
 		int count[] = new int[10];
-		Arrays.fill(count, 0);
+//		Arrays.fill(count, 0);
 
 		// Store count of occurrences in count[]
 		for (i = 0; i < n; i++) {
@@ -83,9 +83,10 @@ public class AddaSort {
 
 	// The main function to that sorts arr[] of size n using
 	// Radix Sort
-	public void radixsort(int arr[], int n) {
+	public void radixsort(int arr[]) {
 		zeit1 = System.nanoTime();
 		// Find the maximum number to know number of digits
+		int n = arr.length;
 		int m = 10 * n;
 
 		// Do counting sort for every digit. Note that instead
